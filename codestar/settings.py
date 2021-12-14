@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ['mb2test.herokuapp.com', 'codestar-django.herokuapp.com' 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-fuchsia-spoonbill-62e56fz1.ws-eu23.gitpod.io']
 
