@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% block content %}
+
 {% load crispy_forms_tags %}
 
 <div class="masthead">
@@ -41,22 +42,23 @@
                                 {% if liked %}
 
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                     class="fas fa-heart"></i></button>
+                                        class="fas fa-heart"></i></button>
 
                                 {% else %}
 
                                 <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                    class="far fa-heart"></i></button>
+                                        class="far fa-heart"></i></button>
 
                                 {% endif %}
 
                             </form>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></span>
+
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
                             <span class="text-secondary"> {{ post.number_of_likes }}</span>
-                            <!-- The number of likes goes before the closing strong tag -->
                         </strong>
+
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
@@ -104,6 +106,7 @@
                     Your comment is awaiting approval
                 </div>
                 {% else %}
+
                 {% if user.is_authenticated %}
 
                 <h3>Leave a comment:</h3>
@@ -115,6 +118,7 @@
                 </form>
                 {% endif %}
                 {% endif %}
+
             </div>
         </div>
     </div>
